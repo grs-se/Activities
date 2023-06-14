@@ -5,18 +5,22 @@ import ActivityForm from '../form/ActivityForm';
 import ActivityList from './ActivityList';
 
 interface Props {
-  activities: Activity[]
+  activities: Activity[];
+  selectedActivity: Activity | undefined;
+  selectActivity: (id: string) => void;
+  cancelSelectActivity: () => void;
 }
 
-function ActivityDashboard({ activities }: Props) {
+function ActivityDashboard({ activities, selectedActivity,
+  selectActivity, cancelSelectActivity }: Props) {
   return (
     <Grid>
       <Grid.Column width="10">
-        <ActivityList activities={activities} />
+        <ActivityList activities={activities} selectActivity={selectActivity} />
       </Grid.Column>
       <Grid.Column width="6">
-        {activities[0] &&
-          <ActivityDetails activity={activities[0]}></ActivityDetails>}
+        {selectedActivity &&
+          <ActivityDetails activity={selectedActivity} cancelSelectActivity={cancelSelectActivity}></ActivityDetails>}
         <ActivityForm />
       </Grid.Column>
     </Grid>
