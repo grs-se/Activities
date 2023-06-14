@@ -14,19 +14,21 @@ export default class ActivityStore {
   }
 
   loadActivities = async () => {
-    this.loadingInitial = true;
+    this.setLoadingInitial(true);
     try {
       const activities = await agent.Activities.list();
       activities.forEach(activity => {
         activity.date = activity.date.split('T')[0];
-        // here we mutate the state in MobX, which is considered an anti-pattern in Redux
         this.activities.push(activity);
       })
-      this.loadingInitial = false;
+      this.setLoadingInitial(false);
     } catch (error) {
       console.log(error);
-      this.loadingInitial = false;
+      this.setLoadingInitial(false);
     }
   }
 
+  setLoadingInitial = (state: boolean) => {
+    this.loadingInitial = state;
+  }
 }
