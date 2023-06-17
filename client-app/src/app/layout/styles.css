@@ -3,27 +3,14 @@ body {
 }
 
 .ui.inverted.top.fixed.menu {
-    background-image: linear-gradient(135deg, rgb(24,42, 115) 0%, rgb(33, 138, 174) 69%, rgb(32, 167, 172) 89%) !important;
+    background-image: linear-gradient(135deg, rgb(24, 42, 115) 0%, rgb(33, 138, 174) 69%, rgb(32, 167, 172) 89%) !important;
 }
 
 .react-calendar {
     width: 100%;
     border: none;
-    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
 }
-
-.react-datepicker-wrapper {
-    width: 100%;
-}
-
-/*.react-datepicker {
-    width: 100%;
-}*/
-/*
-.react-datepicker-popper {
-    width: 100%;
-}
-*/
 
 /*home page styles*/
 
@@ -50,3 +37,7 @@ body {
     }
 
 /*end home page styles*/
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
