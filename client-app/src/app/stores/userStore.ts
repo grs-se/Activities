@@ -8,7 +8,7 @@ export default class UserStore {
 	user: User | null = null;
 
 	constructor() {
-		makeAutoObservable(this)
+		makeAutoObservable(this);
 	}
 
 	get isLoggedIn() {
@@ -24,12 +24,20 @@ export default class UserStore {
 		} catch (error) {
 			throw error;
 		}
-	}
+	};
 
 	logout = () => {
 		store.commonStore.setToken(null);
-		localStorage.removeItem('jwt');
 		this.user = null;
 		router.navigate('/');
-	}
+	};
+
+	getUser = async () => {
+		try {
+			const user = await agent.Account.current();
+			runInAction(() => this.user = user);
+		} catch (e) {
+			console.log(e);
+		}
+	};
 }
