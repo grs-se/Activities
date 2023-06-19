@@ -1,9 +1,11 @@
 import { format } from 'date-fns';
 import { observer } from 'mobx-react-lite';
+import { UPDATE } from 'mobx/dist/internal';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Header, Item, Segment, Image } from 'semantic-ui-react';
 import { Activity } from "../../../app/models/activity";
+import { useStore } from '../../../app/stores/store';
 
 const activityImageStyle = {
 	filter: 'brightness(30%)'
@@ -23,6 +25,7 @@ interface Props {
 }
 
 export default observer(function ActivityDetailedHeader({ activity }: Props) {
+	const { activityStore: { updateAttendance, loading } } = useStore();
 	return (
 		<Segment.Group>
 			<Segment basic attached='top' style={{ padding: '0' }}>
@@ -51,8 +54,10 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
 						Manage Event
 					</Button>
 				) : activity.isGoing ? (
-					<Button>Cancel attendance</Button>
-				) : <Button color='teal'>Join Activity</Button>}
+					<Button loading={loading} onClick={updateAttendance}>Cancel attendance</Button>
+				) : (
+					<Button loading={loading} onClick={updateAttendance} color='teal'>Join Activity</Button>
+				)}
 			</Segment>
 		</Segment.Group>
 	);
