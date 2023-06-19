@@ -9,6 +9,7 @@
         public string Category { get; set; }
         public string City { get; set; }
         public string Venue { get; set; }
+        public bool IsCancelled { get; set; }
         // Initialise collection otherwise we try adding to null
         public ICollection<ActivityAttendee> Attendees { get; set; } = new List<ActivityAttendee>();
     }
