@@ -1,6 +1,5 @@
 import { format } from 'date-fns';
 import { observer } from 'mobx-react-lite';
-import { UPDATE } from 'mobx/dist/internal';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Header, Item, Segment, Image } from 'semantic-ui-react';
