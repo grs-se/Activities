@@ -1,4 +1,3 @@
-import set from 'date-fns/esm/set';
 import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Header, Icon } from 'semantic-ui-react';
