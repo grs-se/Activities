@@ -31,7 +31,7 @@ namespace Infrastructure.Photos
                 var uploadParams = new ImageUploadParams
                 {
                     File = new FileDescription(file.FileName, stream),
-                    Folder = "Activities",
+                    //Folder = "Activities",
                     Transformation = new Transformation().Height(500).Width(500).Crop("fill")
                 };
 
