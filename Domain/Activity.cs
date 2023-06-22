@@ -12,5 +12,6 @@
         public bool IsCancelled { get; set; }
         // Initialise collection otherwise we try adding to null
         public ICollection<ActivityAttendee> Attendees { get; set; } = new List<ActivityAttendee>();
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }
