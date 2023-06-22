@@ -64,6 +64,5 @@ namespace Application.Comments
                 return Result<CommentDto>.Failure("Failed to add comment");
             }
         }
-
     }
 }
