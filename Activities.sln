@@ -16,9 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_docs", "_docs", "{9BC6E8B6
 		notes.md = notes.md
 	EndProjectSection
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "client-app", "client-app\client-app.esproj", "{C97632C2-0347-4E49-AE79-B0D239F630C8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{9384A8B2-8424-470A-B8D3-A980AE3A3272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{9384A8B2-8424-470A-B8D3-A980AE3A3272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,12 +40,6 @@ Global
 		{773788E7-5DA7-49C3-A2A5-1A124B4F8985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{773788E7-5DA7-49C3-A2A5-1A124B4F8985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{773788E7-5DA7-49C3-A2A5-1A124B4F8985}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C97632C2-0347-4E49-AE79-B0D239F630C8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{9384A8B2-8424-470A-B8D3-A980AE3A3272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9384A8B2-8424-470A-B8D3-A980AE3A3272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9384A8B2-8424-470A-B8D3-A980AE3A3272}.Release|Any CPU.ActiveCfg = Release|Any CPU
