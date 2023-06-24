@@ -39,8 +39,12 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
 app.MapHub<ChatHub>("/chat");
+app.MapFallbackToController("Index", "Fallback");
 
 // using: when we are finished executing this particular method / scope anything inside it will be disposed and cleaned from memory.
 using var scope = app.Services.CreateScope();
